@@ -14,43 +14,43 @@ import com.lab.laboratorio.service.TrabalhoService;
 public class TrabalhoBusiness {
 
 	TrabalhoRepository repository;
-	
+
 	TrabalhoService service;
-	
-	
+
 	public TrabalhoBusiness(TrabalhoRepository repository) {
 		this.repository = repository;
 	}
+
 	public TrabalhoResponseDTO cadastra(Trabalho trabalho) {
-		 Trabalho save = repository.save(trabalho);
-		 return entidadeParaResponseDTO(save);
+		Trabalho save = repository.save(trabalho);
+		return entidadeParaResponseDTO(save);
 	}
+
 	public List<Trabalho> busca() {
 		return repository.findAll();
 	}
+
 	public Trabalho altera(Trabalho trabalho) {
-		if(repository.findById(trabalho.getId()) != null)
+		if (repository.findById(trabalho.getId()) != null)
 			return repository.save(trabalho);
 		return null;
 	}
-    public void deleta(Long id) {
-    	Optional<Trabalho> findById = repository.findById(id);
-    	if(findById.isPresent())	
-    		repository.deleteById(findById.get().getId());
-    }
-	public Trabalho buscaPorId(Long id){
-		Trabalho trab =  repository.findById(id).get();
+
+	public void deleta(Long id) {
+		Optional<Trabalho> findById = repository.findById(id);
+		if (findById.isPresent())
+			repository.deleteById(findById.get().getId());
+	}
+
+	public Trabalho buscaPorId(Long id) {
+		Trabalho trab = repository.findById(id).get();
 		return trab;
 	}
+
 	private TrabalhoResponseDTO entidadeParaResponseDTO(Trabalho trabalho) {
-		return TrabalhoResponseDTO.builder().id(trabalho.getId())
-											.cidade(trabalho.getCidade())
-											.paciente(trabalho.getPaciente())
-											.cor(trabalho.getCor())
-											.dentista(trabalho.getDentista())
-											.metal(trabalho.getMetal())
-											.observacoes(trabalho.getObservacoes())
-											.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
-											.build();
+		return TrabalhoResponseDTO.builder().id(trabalho.getId()).cidade(trabalho.getCidade())
+				.paciente(trabalho.getPaciente()).cor(trabalho.getCor()).dentista(trabalho.getDentista())
+				.metal(trabalho.getMetal()).observacoes(trabalho.getObservacoes())
+				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar()).build();
 	}
 }

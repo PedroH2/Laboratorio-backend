@@ -59,15 +59,18 @@ public class TrabalhoController {
 	
 	@PutMapping("/altera/{id}")
 	public ResponseEntity<ResponseDTO<Void>> altera(@PathVariable Long id, @RequestBody TrabalhoRequestDTO trabalhoRequestDTO){
-
+		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id, trabalhoRequestDTO);
 		service.altera(id, trabalhoRequestDTO);
-		
-		return ResponseEntity.noContent().build();
+		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id, trabalhoRequestDTO);
+		return ResponseEntity.accepted().build();
 	
 	}
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Trabalho> deleta(@PathVariable Long id){
-		return ResponseEntity.ok()
-				.body(null);
+		log.debug("Iniciando processo de DELETE no endpoint: /api/v1/trabalho/id", id);
+		log.debug("Finalizando processo de DELETE no endpoint: /api/v1/trabalho/id", id);
+		service.deleta(id);
+		return ResponseEntity.ok().body(null);
+		
 	}
 }
