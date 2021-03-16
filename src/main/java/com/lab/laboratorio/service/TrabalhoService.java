@@ -61,17 +61,26 @@ public class TrabalhoService {
 		trabalho.setCor(trabalhoRequestDTO.getCor());
 		trabalho.setDentista(trabalhoRequestDTO.getDentista());
 		trabalho.setMetal(trabalhoRequestDTO.getMetal());
+		trabalho.setDtEntrada(trabalhoRequestDTO.getDtEntrada());
+		trabalho.setDtEntregaDesejada(trabalhoRequestDTO.getDtEntregaDesejada());
 		trabalho.setObservacoes(trabalhoRequestDTO.getObservacoes());
 		trabalho.setPaciente(trabalhoRequestDTO.getPaciente());
 		trabalho.setTrabalhoAExecutar(trabalhoRequestDTO.getTrabalhoAExecutar());
-
 		return trabalho;
 	}
 
 	private TrabalhoResponseDTO entidadeParaResponseDTO(Trabalho trabalho) {
-		return TrabalhoResponseDTO.builder().id(trabalho.getId()).cidade(trabalho.getCidade())
-				.paciente(trabalho.getPaciente()).cor(trabalho.getCor()).dentista(trabalho.getDentista())
-				.metal(trabalho.getMetal()).observacoes(trabalho.getObservacoes())
-				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar()).build();
+		return TrabalhoResponseDTO.builder()
+				.id(trabalho.getId())
+				.cidade(trabalho.getCidade())
+				.paciente(trabalho.getPaciente())
+				.cor(trabalho.getCor())
+				.dentista(trabalho.getDentista())
+				.metal(trabalho.getMetal())
+				.dtEntrada(trabalho.getDtEntrada())
+				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
+				.observacoes(trabalho.getObservacoes())
+				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
+				.build();
 	}
 }

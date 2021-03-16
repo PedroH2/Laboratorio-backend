@@ -1,8 +1,8 @@
 package com.lab.laboratorio.controller;
 
 import java.util.List;
-import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,7 +20,6 @@ import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.service.TrabalhoService;
 
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -28,7 +27,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TrabalhoController {
 
-	TrabalhoService service;
+	private TrabalhoService service;
 	
 	public TrabalhoController(TrabalhoService service) {
 		this.service = service;

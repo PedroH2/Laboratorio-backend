@@ -1,5 +1,7 @@
 package com.lab.laboratorio.dto.response;
 
+import java.time.LocalDate;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
@@ -24,6 +26,8 @@ public class TrabalhoResponseDTO {
 	private String dentista;
 	private String paciente;
 	private String trabalhoAExecutar;
+	private LocalDate dtEntrada;
+	private LocalDate dtEntregaDesejada;
 	private String cor;
 	private String metal;
 	private String observacoes;

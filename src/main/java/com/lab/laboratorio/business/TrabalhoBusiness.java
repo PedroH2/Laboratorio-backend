@@ -48,9 +48,15 @@ public class TrabalhoBusiness {
 	}
 
 	private TrabalhoResponseDTO entidadeParaResponseDTO(Trabalho trabalho) {
-		return TrabalhoResponseDTO.builder().id(trabalho.getId()).cidade(trabalho.getCidade())
-				.paciente(trabalho.getPaciente()).cor(trabalho.getCor()).dentista(trabalho.getDentista())
-				.metal(trabalho.getMetal()).observacoes(trabalho.getObservacoes())
+		return TrabalhoResponseDTO.builder()
+				.id(trabalho.getId())
+				.cidade(trabalho.getCidade())
+				.paciente(trabalho.getPaciente())
+				.cor(trabalho.getCor())
+				.dtEntrada(trabalho.getDtEntrada())
+				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
+				.metal(trabalho.getMetal())
+				.observacoes(trabalho.getObservacoes())
 				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar()).build();
 	}
 }

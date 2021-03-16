@@ -1,6 +1,6 @@
 package com.lab.laboratorio.model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -35,6 +35,12 @@ public class Trabalho {
 	@Column(length = 100, nullable = false)
 	private String paciente;
 	
+	@Column
+	private LocalDate dtEntrada;
+	
+	@Column
+	private LocalDate dtEntregaDesejada;
+	
 	@Column(length = 100, nullable = false)
 	private String trabalhoAExecutar;
 	
@@ -46,4 +52,5 @@ public class Trabalho {
 	
 	@Column(length = 1000, nullable = true)
 	private String observacoes;
+
 }

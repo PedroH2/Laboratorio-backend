@@ -1,5 +1,7 @@
 package com.lab.laboratorio.dto.request;
 
+import java.time.LocalDate;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,19 +15,15 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Builder
-public class TrabalhoRequestDTO {	
+public class TrabalhoRequestDTO {
 
 	private String cidade;
-	
 	private String dentista;
-	
 	private String paciente;
-	
+	private LocalDate dtEntrada;
+	private LocalDate dtEntregaDesejada;
 	private String trabalhoAExecutar;
-	
 	private String cor;
-	
 	private String metal;
-	
 	private String observacoes;
 }
