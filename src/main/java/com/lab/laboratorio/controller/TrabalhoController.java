@@ -2,7 +2,6 @@ package com.lab.laboratorio.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lab.laboratorio.dto.request.TrabalhoRequestDTO;
 import com.lab.laboratorio.dto.response.ResponseDTO;
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
+import com.lab.laboratorio.enums.SituacaoTrabalho;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.service.TrabalhoService;
 
@@ -67,9 +67,16 @@ public class TrabalhoController {
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Trabalho> deleta(@PathVariable Long id){
 		log.debug("Iniciando processo de DELETE no endpoint: /api/v1/trabalho/id", id);
-		log.debug("Finalizando processo de DELETE no endpoint: /api/v1/trabalho/id", id);
 		service.deleta(id);
+		log.debug("Finalizando processo de DELETE no endpoint: /api/v1/trabalho/id", id);
 		return ResponseEntity.ok().body(null);
 		
+	}
+	@PutMapping("{id}/{situacao}")
+	public ResponseEntity<ResponseDTO<Void>> alteraPorId(@PathVariable Long id, @PathVariable SituacaoTrabalho situacao){
+		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
+		service.alteraSituacao(id, situacao);
+		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
+		return ResponseEntity.accepted().build();
 	}
 }

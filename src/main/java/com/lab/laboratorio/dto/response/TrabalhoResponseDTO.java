@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.lab.laboratorio.enums.SituacaoTrabalho;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,4 +32,5 @@ public class TrabalhoResponseDTO {
 	private String cor;
 	private String metal;
 	private String observacoes;
+	private SituacaoTrabalho situacaoTrabalho;
 }

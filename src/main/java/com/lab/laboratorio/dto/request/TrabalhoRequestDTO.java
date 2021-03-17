@@ -2,6 +2,8 @@ package com.lab.laboratorio.dto.request;
 
 import java.time.LocalDate;
 
+import com.lab.laboratorio.enums.SituacaoTrabalho;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -26,4 +28,5 @@ public class TrabalhoRequestDTO {
 	private String cor;
 	private String metal;
 	private String observacoes;
+	private SituacaoTrabalho situacaoTrabalho;
 }

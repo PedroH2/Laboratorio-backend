@@ -57,6 +57,8 @@ public class TrabalhoBusiness {
 				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
 				.metal(trabalho.getMetal())
 				.observacoes(trabalho.getObservacoes())
-				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar()).build();
+				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
+				.situacaoTrabalho(trabalho.getSituacaoTrabalho())
+				.build();
 	}
 }

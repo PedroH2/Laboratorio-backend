@@ -9,6 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.lab.laboratorio.enums.SituacaoTrabalho;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -52,5 +54,8 @@ public class Trabalho {
 	
 	@Column(length = 1000, nullable = true)
 	private String observacoes;
+	
+	@Column
+	private SituacaoTrabalho situacaoTrabalho;
 
 }

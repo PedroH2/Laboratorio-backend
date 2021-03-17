@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import com.lab.laboratorio.business.TrabalhoBusiness;
 import com.lab.laboratorio.dto.request.TrabalhoRequestDTO;
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
+import com.lab.laboratorio.enums.SituacaoTrabalho;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.repository.TrabalhoRepository;
 
@@ -32,7 +33,6 @@ public class TrabalhoService {
 	public List<TrabalhoResponseDTO> busca() {
 		List<Trabalho> trabalhos = business.busca();
 		List<TrabalhoResponseDTO> trabalhoResponseDTO = new ArrayList<>();
-
 		trabalhos.forEach(trab -> trabalhoResponseDTO.add(entidadeParaResponseDTO(trab)));
 
 		return trabalhoResponseDTO;
@@ -41,9 +41,7 @@ public class TrabalhoService {
 	public void altera(Long id, TrabalhoRequestDTO trabalhoRequestDTO) {
 
 		Trabalho trabalho = business.buscaPorId(id);
-
 		Trabalho alteraTrab = dtoParaEntidade(trabalhoRequestDTO, trabalho);
-
 		business.altera(alteraTrab);
 	}
 
@@ -66,6 +64,7 @@ public class TrabalhoService {
 		trabalho.setObservacoes(trabalhoRequestDTO.getObservacoes());
 		trabalho.setPaciente(trabalhoRequestDTO.getPaciente());
 		trabalho.setTrabalhoAExecutar(trabalhoRequestDTO.getTrabalhoAExecutar());
+		trabalho.setSituacaoTrabalho(trabalhoRequestDTO.getSituacaoTrabalho());
 		return trabalho;
 	}
 
@@ -81,6 +80,13 @@ public class TrabalhoService {
 				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
 				.observacoes(trabalho.getObservacoes())
 				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
+				.situacaoTrabalho(trabalho.getSituacaoTrabalho())
 				.build();
+	}
+
+	public void alteraSituacao(Long id, SituacaoTrabalho situacao) {
+		Trabalho trabalhoAlterado = business.buscaPorId(id);
+		trabalhoAlterado.setSituacaoTrabalho(situacao);
+		business.altera(trabalhoAlterado);
 	}
 }
