@@ -73,10 +73,10 @@ public class TrabalhoController {
 		
 	}
 	@PutMapping("{id}/{situacao}")
-	public ResponseEntity<ResponseDTO<Void>> alteraPorId(@PathVariable Long id, @PathVariable SituacaoTrabalho situacao){
+	public ResponseEntity<ResponseDTO<TrabalhoResponseDTO>> alteraPorId(@PathVariable Long id, @PathVariable SituacaoTrabalho situacao){
 		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
-		service.alteraSituacao(id, situacao);
+		TrabalhoResponseDTO dto = service.alteraSituacao(id, situacao);
 		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
-		return ResponseEntity.accepted().build();
+		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
+import com.lab.laboratorio.enums.SituacaoTrabalho;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.repository.TrabalhoRepository;
 import com.lab.laboratorio.service.TrabalhoService;

@@ -54,6 +54,13 @@ public class TrabalhoService {
 		return entidadeParaResponseDTO(trabalho);
 	}
 
+	public TrabalhoResponseDTO alteraSituacao(Long id, SituacaoTrabalho situacao) {
+		Trabalho trabalhoAlterado = business.buscaPorId(id);
+		trabalhoAlterado.setSituacaoTrabalho(situacao);
+		business.altera(trabalhoAlterado);
+		return entidadeParaResponseDTO(trabalhoAlterado);
+	}
+
 	private Trabalho dtoParaEntidade(TrabalhoRequestDTO trabalhoRequestDTO, Trabalho trabalho) {
 		trabalho.setCidade(trabalhoRequestDTO.getCidade());
 		trabalho.setCor(trabalhoRequestDTO.getCor());
@@ -82,11 +89,5 @@ public class TrabalhoService {
 				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
 				.situacaoTrabalho(trabalho.getSituacaoTrabalho())
 				.build();
-	}
-
-	public void alteraSituacao(Long id, SituacaoTrabalho situacao) {
-		Trabalho trabalhoAlterado = business.buscaPorId(id);
-		trabalhoAlterado.setSituacaoTrabalho(situacao);
-		business.altera(trabalhoAlterado);
 	}
 }
