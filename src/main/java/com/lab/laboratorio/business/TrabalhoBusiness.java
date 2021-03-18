@@ -1,8 +1,10 @@
 package com.lab.laboratorio.business;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+import com.lab.laboratorio.utils.MontaDtoUtils;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
@@ -24,7 +26,7 @@ public class TrabalhoBusiness {
 
 	public TrabalhoResponseDTO cadastra(Trabalho trabalho) {
 		Trabalho save = repository.save(trabalho);
-		return entidadeParaResponseDTO(save);
+		return MontaDtoUtils.entidadeParaResponseDTO(save);
 	}
 
 	public List<Trabalho> busca() {
@@ -32,7 +34,7 @@ public class TrabalhoBusiness {
 	}
 
 	public Trabalho altera(Trabalho trabalho) {
-		if (repository.findById(trabalho.getId()) != null)
+		if (repository.findById(trabalho.getId()).isPresent())
 			return repository.save(trabalho);
 		return null;
 	}
@@ -48,18 +50,15 @@ public class TrabalhoBusiness {
 		return trab;
 	}
 
-	private TrabalhoResponseDTO entidadeParaResponseDTO(Trabalho trabalho) {
-		return TrabalhoResponseDTO.builder()
-				.id(trabalho.getId())
-				.cidade(trabalho.getCidade())
-				.paciente(trabalho.getPaciente())
-				.cor(trabalho.getCor())
-				.dtEntrada(trabalho.getDtEntrada())
-				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
-				.metal(trabalho.getMetal())
-				.observacoes(trabalho.getObservacoes())
-				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
-				.situacaoTrabalho(trabalho.getSituacaoTrabalho())
-				.build();
+	public List<Trabalho> buscaPorSituacaoTrabalho(SituacaoTrabalho situacao) {
+		return repository.findBySituacaoTrabalho(situacao);
+	}
+
+	public List<Trabalho> buscaPorDataDeEntrada(LocalDate data) {
+		return repository.buscaPorDataDeEntrada(data);
+	}
+
+	public List<Trabalho> buscaPorDataDeEntregaDesejada(LocalDate data) {
+		return repository.buscaPorDataDeEntregaDesejada(data);
 	}
 }

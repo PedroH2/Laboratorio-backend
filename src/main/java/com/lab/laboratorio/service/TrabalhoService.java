@@ -1,8 +1,10 @@
 package com.lab.laboratorio.service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lab.laboratorio.utils.MontaDtoUtils;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.business.TrabalhoBusiness;
@@ -25,23 +27,21 @@ public class TrabalhoService {
 	}
 
 	public TrabalhoResponseDTO cadastra(TrabalhoRequestDTO trabalhoRequestDTO) {
-
-		Trabalho trabalho = dtoParaEntidade(trabalhoRequestDTO, new Trabalho());
+		Trabalho trabalho = MontaDtoUtils.dtoParaEntidade(trabalhoRequestDTO, new Trabalho());
 		return business.cadastra(trabalho);
 	}
 
 	public List<TrabalhoResponseDTO> busca() {
 		List<Trabalho> trabalhos = business.busca();
 		List<TrabalhoResponseDTO> trabalhoResponseDTO = new ArrayList<>();
-		trabalhos.forEach(trab -> trabalhoResponseDTO.add(entidadeParaResponseDTO(trab)));
+		trabalhos.forEach(trab -> trabalhoResponseDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
 
 		return trabalhoResponseDTO;
 	}
 
 	public void altera(Long id, TrabalhoRequestDTO trabalhoRequestDTO) {
-
 		Trabalho trabalho = business.buscaPorId(id);
-		Trabalho alteraTrab = dtoParaEntidade(trabalhoRequestDTO, trabalho);
+		Trabalho alteraTrab = MontaDtoUtils.dtoParaEntidade(trabalhoRequestDTO, trabalho);
 		business.altera(alteraTrab);
 	}
 
@@ -51,43 +51,37 @@ public class TrabalhoService {
 
 	public TrabalhoResponseDTO buscaPorId(Long id) throws Exception {
 		Trabalho trabalho = business.buscaPorId(id);
-		return entidadeParaResponseDTO(trabalho);
+		return MontaDtoUtils.entidadeParaResponseDTO(trabalho);
 	}
 
 	public TrabalhoResponseDTO alteraSituacao(Long id, SituacaoTrabalho situacao) {
 		Trabalho trabalhoAlterado = business.buscaPorId(id);
 		trabalhoAlterado.setSituacaoTrabalho(situacao);
 		business.altera(trabalhoAlterado);
-		return entidadeParaResponseDTO(trabalhoAlterado);
+		return MontaDtoUtils.entidadeParaResponseDTO(trabalhoAlterado);
 	}
 
-	private Trabalho dtoParaEntidade(TrabalhoRequestDTO trabalhoRequestDTO, Trabalho trabalho) {
-		trabalho.setCidade(trabalhoRequestDTO.getCidade());
-		trabalho.setCor(trabalhoRequestDTO.getCor());
-		trabalho.setDentista(trabalhoRequestDTO.getDentista());
-		trabalho.setMetal(trabalhoRequestDTO.getMetal());
-		trabalho.setDtEntrada(trabalhoRequestDTO.getDtEntrada());
-		trabalho.setDtEntregaDesejada(trabalhoRequestDTO.getDtEntregaDesejada());
-		trabalho.setObservacoes(trabalhoRequestDTO.getObservacoes());
-		trabalho.setPaciente(trabalhoRequestDTO.getPaciente());
-		trabalho.setTrabalhoAExecutar(trabalhoRequestDTO.getTrabalhoAExecutar());
-		trabalho.setSituacaoTrabalho(trabalhoRequestDTO.getSituacaoTrabalho());
-		return trabalho;
+	public List<TrabalhoResponseDTO> buscaPorSituacaoTrabalho(SituacaoTrabalho situacao) {
+		List<Trabalho> trabalhos = business.buscaPorSituacaoTrabalho(situacao);
+		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
+		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
+
+		return trabalhosDTO;
 	}
 
-	private TrabalhoResponseDTO entidadeParaResponseDTO(Trabalho trabalho) {
-		return TrabalhoResponseDTO.builder()
-				.id(trabalho.getId())
-				.cidade(trabalho.getCidade())
-				.paciente(trabalho.getPaciente())
-				.cor(trabalho.getCor())
-				.dentista(trabalho.getDentista())
-				.metal(trabalho.getMetal())
-				.dtEntrada(trabalho.getDtEntrada())
-				.dtEntregaDesejada(trabalho.getDtEntregaDesejada())
-				.observacoes(trabalho.getObservacoes())
-				.trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
-				.situacaoTrabalho(trabalho.getSituacaoTrabalho())
-				.build();
+	public List<TrabalhoResponseDTO> buscaPorDataDeEntrada(LocalDate data) {
+		List<Trabalho> trabalhos = business.buscaPorDataDeEntrada(data);
+		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
+		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
+
+		return trabalhosDTO;
+	}
+
+	public List<TrabalhoResponseDTO> buscaPorDataDeEntregaDesejada(LocalDate data) {
+		List<Trabalho> trabalhos = business.buscaPorDataDeEntregaDesejada(data);
+		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
+		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
+
+		return trabalhosDTO;
 	}
 }
