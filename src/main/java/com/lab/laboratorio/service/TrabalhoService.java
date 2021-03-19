@@ -84,4 +84,12 @@ public class TrabalhoService {
 
 		return trabalhosDTO;
 	}
+
+	public List<TrabalhoResponseDTO> buscaEntreDatas(LocalDate dtEntrada, LocalDate dtEntregaDesejada) {
+		List<Trabalho> trabalhos = business.buscaEntreDatas(dtEntrada, dtEntregaDesejada);
+		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
+		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
+
+		return trabalhosDTO;
+	}
 }

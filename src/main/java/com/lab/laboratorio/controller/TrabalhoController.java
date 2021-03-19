@@ -100,4 +100,12 @@ public class TrabalhoController {
 		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", data);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
+	@GetMapping("/buscaEntreDatas/{dataEntrada}/{dataEntregaDesejada}")
+	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaEntreDatas(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntrada,
+																				  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntregaDesejada){
+		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", dataEntrada, dataEntregaDesejada);
+		List<TrabalhoResponseDTO> dto = service.buscaEntreDatas(dataEntrada, dataEntregaDesejada);
+		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", dataEntrada	, dataEntregaDesejada);
+		return ResponseEntity.ok(new ResponseDTO<>(dto));
+	}
 }

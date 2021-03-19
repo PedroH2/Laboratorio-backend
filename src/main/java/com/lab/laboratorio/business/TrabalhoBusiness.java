@@ -61,4 +61,8 @@ public class TrabalhoBusiness {
 	public List<Trabalho> buscaPorDataDeEntregaDesejada(LocalDate data) {
 		return repository.buscaPorDataDeEntregaDesejada(data);
 	}
+
+	public List<Trabalho> buscaEntreDatas(LocalDate dtEntrada, LocalDate dtEntregaDesejada) {
+		return repository.buscaEntreDatas(dtEntrada, dtEntregaDesejada);
+	}
 }
