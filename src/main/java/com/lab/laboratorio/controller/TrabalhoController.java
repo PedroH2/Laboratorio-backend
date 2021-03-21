@@ -38,9 +38,9 @@ public class TrabalhoController {
 	
 	@PostMapping("/cadastra")
 	public ResponseEntity<ResponseDTO<TrabalhoResponseDTO>> cadastra(@RequestBody TrabalhoRequestDTO requestDTO){
-		log.debug("Iniciando processo de POST no endpoint: /api/v1/trabalho/cadastra", requestDTO);
+		log.debug("Iniciando processo de POST no endpoint: /api/v1/trabalho/cadastra");
 		TrabalhoResponseDTO trabalhoResponseDTO = service.cadastra(requestDTO);
-		log.debug("Finalizando processo de POST no endpoint: /api/v1/trabalho/cadastra", trabalhoResponseDTO);
+		log.debug("Finalizando processo de POST no endpoint: /api/v1/trabalho/cadastra");
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(new ResponseDTO<>(trabalhoResponseDTO));
 	}
@@ -76,37 +76,37 @@ public class TrabalhoController {
 	}
 	@PutMapping("{id}/{situacao}")
 	public ResponseEntity<ResponseDTO<TrabalhoResponseDTO>> alteraPorId(@PathVariable Long id, @PathVariable SituacaoTrabalho situacao){
-		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
+		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/{}/{} para alteração de situação de trabalho", id, situacao);
 		TrabalhoResponseDTO dto = service.alteraSituacao(id, situacao);
-		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/{id}/{situacao} para alteração de situação de trabalho", id, situacao);
+		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/{}/{} para alteração de situação de trabalho", id, situacao);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 	@GetMapping("/buscaPorSituacaoTrabalho/{situacao}")
 	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaPorSituacaoTrabalho(@PathVariable SituacaoTrabalho situacao){
 		List<TrabalhoResponseDTO> dto = service.buscaPorSituacaoTrabalho(situacao);
-	log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/busacPorSituacaoTrabalho/{situacao}", situacao);
+	log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/busacPorSituacaoTrabalho/{}", situacao);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 	@GetMapping("/buscaPorDataDeEntrada/{data}")
 	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaPorDataDeEntrada(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate data){
-		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", data);
+		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}", data);
 		List<TrabalhoResponseDTO> dto = service.buscaPorDataDeEntrada(data);
-		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", data);
+		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}", data);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 	@GetMapping("/buscaPorDataDeEntregaDesejada/{data}")
 	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaPorDataDeEntregaDesejada(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate data){
-		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", data);
+		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}", data);
 		List<TrabalhoResponseDTO> dto = service.buscaPorDataDeEntregaDesejada(data);
-		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", data);
+		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}", data);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 	@GetMapping("/buscaEntreDatas/{dataEntrada}/{dataEntregaDesejada}")
 	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaEntreDatas(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntrada,
 																				  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntregaDesejada){
-		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", dataEntrada, dataEntregaDesejada);
+		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}");
 		List<TrabalhoResponseDTO> dto = service.buscaEntreDatas(dataEntrada, dataEntregaDesejada);
-		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{data}", dataEntrada	, dataEntregaDesejada);
+		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}" );
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
 }
