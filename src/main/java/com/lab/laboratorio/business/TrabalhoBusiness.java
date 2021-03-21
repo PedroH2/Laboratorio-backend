@@ -4,21 +4,19 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
-import com.lab.laboratorio.utils.MontaDtoUtils;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
 import com.lab.laboratorio.enums.SituacaoTrabalho;
+import com.lab.laboratorio.error.ResourceNotFoundException;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.repository.TrabalhoRepository;
-import com.lab.laboratorio.service.TrabalhoService;
+import com.lab.laboratorio.utils.MontaDtoUtils;
 
 @Component
 public class TrabalhoBusiness {
 
-	TrabalhoRepository repository;
-
-	TrabalhoService service;
+	private TrabalhoRepository repository;
 
 	public TrabalhoBusiness(TrabalhoRepository repository) {
 		this.repository = repository;
@@ -34,20 +32,18 @@ public class TrabalhoBusiness {
 	}
 
 	public Trabalho altera(Trabalho trabalho) {
-		if (repository.findById(trabalho.getId()).isPresent())
-			return repository.save(trabalho);
-		return null;
+		verificaSeTrabExiste(trabalho.getId());		
+		return repository.save(trabalho);
 	}
 
 	public void deleta(Long id) {
-		Optional<Trabalho> findById = repository.findById(id);
-		if (findById.isPresent())
-			repository.deleteById(findById.get().getId());
+		verificaSeTrabExiste(id);
+		repository.deleteById(id);
 	}
 
 	public Trabalho buscaPorId(Long id) {
-		Trabalho trab = repository.findById(id).get();
-		return trab;
+		verificaSeTrabExiste(id);
+		return repository.findById(id).get();
 	}
 
 	public List<Trabalho> buscaPorSituacaoTrabalho(SituacaoTrabalho situacao) {
@@ -64,5 +60,11 @@ public class TrabalhoBusiness {
 
 	public List<Trabalho> buscaEntreDatas(LocalDate dtEntrada, LocalDate dtEntregaDesejada) {
 		return repository.buscaEntreDatas(dtEntrada, dtEntregaDesejada);
+	}
+	
+	private void verificaSeTrabExiste(Long id) {
+		Optional<Trabalho> findById = repository.findById(id);
+		if(!findById.isPresent())
+			throw new ResourceNotFoundException("Nenhum trabalho encontrado para realizar a operação");
 	}
 }

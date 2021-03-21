@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lab.laboratorio.utils.MontaDtoUtils;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.business.TrabalhoBusiness;
@@ -12,18 +11,15 @@ import com.lab.laboratorio.dto.request.TrabalhoRequestDTO;
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
 import com.lab.laboratorio.enums.SituacaoTrabalho;
 import com.lab.laboratorio.model.Trabalho;
-import com.lab.laboratorio.repository.TrabalhoRepository;
+import com.lab.laboratorio.utils.MontaDtoUtils;
 
 @Component
 public class TrabalhoService {
 
-	TrabalhoBusiness business;
-
-	TrabalhoRepository repository;
-
-	public TrabalhoService(TrabalhoBusiness business, TrabalhoRepository repository) {
+	private TrabalhoBusiness business;
+	
+	public TrabalhoService(TrabalhoBusiness business) {
 		this.business = business;
-		this.repository = repository;
 	}
 
 	public TrabalhoResponseDTO cadastra(TrabalhoRequestDTO trabalhoRequestDTO) {

@@ -19,6 +19,7 @@ import com.lab.laboratorio.dto.request.TrabalhoRequestDTO;
 import com.lab.laboratorio.dto.response.ResponseDTO;
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
 import com.lab.laboratorio.enums.SituacaoTrabalho;
+import com.lab.laboratorio.error.ResourceNotFoundException;
 import com.lab.laboratorio.model.Trabalho;
 import com.lab.laboratorio.service.TrabalhoService;
 
