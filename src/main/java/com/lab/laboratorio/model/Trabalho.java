@@ -31,7 +31,10 @@ public class Trabalho {
 	
 	@Column(length = 100, nullable = true)
 	private String cidade;
-	
+
+	@Column(length = 100, nullable = false)
+	private String colaboradorResponsavel;
+
 	@Column(length = 100, nullable = false)
 	private String dentista;
 	

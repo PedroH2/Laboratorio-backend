@@ -19,6 +19,7 @@ public class MontaDtoUtils {
         trabalho.setSituacaoTrabalho(trabalhoRequestDTO.getSituacaoTrabalho());
         trabalho.setValorTrabalho(trabalhoRequestDTO.getValorTrabalho());
         trabalho.setDtFinalizacao(trabalhoRequestDTO.getDtFinalizacao());
+        trabalho.setColaboradorResponsavel(trabalhoRequestDTO.getColaboradorResponsavel());
         return trabalho;
     }
 
@@ -37,6 +38,7 @@ public class MontaDtoUtils {
                 .situacaoTrabalho(trabalho.getSituacaoTrabalho())
                 .valorTrabalho(trabalho.getValorTrabalho())
                 .dtFinalizacao(trabalho.getDtFinalizacao())
+                .colaboradorResponsavel(trabalho.getColaboradorResponsavel())
                 .build();
     }
 }

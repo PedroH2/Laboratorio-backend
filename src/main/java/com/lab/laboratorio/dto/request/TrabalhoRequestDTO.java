@@ -32,4 +32,5 @@ public class TrabalhoRequestDTO {
 	private SituacaoTrabalho situacaoTrabalho;
 	private BigDecimal valorTrabalho;
 	private LocalDate dtFinalizacao;
+	private String colaboradorResponsavel;
 }
