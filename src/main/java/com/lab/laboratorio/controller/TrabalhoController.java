@@ -113,21 +113,18 @@ public class TrabalhoController {
 	}
 	@PutMapping("/finalizarTrab/{id}")
 	public ResponseEntity<ResponseDTO<TrabalhoResponseDTO>> finalizaTrab(@PathVariable Long id){
-		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id);
+		log.debug("Iniciando processo de PUT no endpoint: /finalizarTrab/{}", id);
 		TrabalhoResponseDTO trabalhoResponseDTO = service.finalizaTrab(id);
-		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id);
+		log.debug("Finalizando processo de PUT no endpoint: /finalizarTrab/{}", id);
 		return ResponseEntity.ok(new ResponseDTO<>(trabalhoResponseDTO));
 
 	}
-
-
-
 	@GetMapping("/buscaFaturamentoDeTrabsFinalizados/{dataParamInicial}/{dataParam}")
 	public ResponseEntity<TotalFatObj> buscaFaturamentoDeTrabsFinalizados(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataParamInicial,
 																		  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataParam){
-		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}");
+		log.debug("Iniciando processo de GET no endpoint: /buscaFaturamentoDeTrabsFinalizados/{}/{}");
 		TotalFatObj valTotal = service.buscaFaturamentoTotalDeTrabsFinalizados(dataParamInicial, dataParam);
-		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}" );
+		log.debug("Finalizando processo de GET no endpoint: /buscaFaturamentoDeTrabsFinalizados/{}/{}" );
 		return ResponseEntity.ok().body(valTotal);
 	}
 }
