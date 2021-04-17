@@ -44,7 +44,7 @@ public class Trabalho {
 	@Column
 	private LocalDate dtEntrada;
 	
-	@Column
+	@Column(nullable = false)
 	private LocalDate dtEntregaDesejada;
 	
 	@Column(length = 100, nullable = false)

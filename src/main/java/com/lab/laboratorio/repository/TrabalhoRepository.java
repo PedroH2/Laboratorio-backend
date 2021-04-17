@@ -21,6 +21,9 @@ public interface TrabalhoRepository extends JpaRepository<Trabalho, Long> {
     @Query("select t from Trabalho t where dtEntregaDesejada = :data ")
     List<Trabalho> buscaPorDataDeEntregaDesejada(LocalDate data);
 
-    @Query("select t from Trabalho t where dtFinalizacao between :dtEntrada and:dtEntregaDesejada ")
-    List<Trabalho> buscaEntreDatas(@Param("dtEntrada")LocalDate dtEntrada, @Param("dtEntregaDesejada")LocalDate dtEntregaDesejada);
+    @Query("select t from Trabalho t where dtEntrada between :dtEntrada and :dataParam ")
+    List<Trabalho> buscaEntreDatasParam(@Param("dtEntrada")LocalDate dtEntrada, @Param("dataParam")LocalDate dataParam);
+
+    @Query("select t from Trabalho t where dtFinalizacao between :dtEntrada and :dataParametroFat ")
+    List<Trabalho> buscaEntreDatas(@Param("dtEntrada")LocalDate dtEntrada, @Param("dataParametroFat")LocalDate dataParametroFat);
 }

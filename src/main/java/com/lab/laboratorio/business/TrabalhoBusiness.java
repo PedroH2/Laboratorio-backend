@@ -58,8 +58,8 @@ public class TrabalhoBusiness {
 		return repository.buscaPorDataDeEntregaDesejada(data);
 	}
 
-	public List<Trabalho> buscaEntreDatas(LocalDate dtEntrada, LocalDate dtEntregaDesejada) {
-		return repository.buscaEntreDatas(dtEntrada, dtEntregaDesejada);
+	public List<Trabalho> buscaEntreDatas(LocalDate dtEntrada, LocalDate dataParam) {
+		return repository.buscaEntreDatasParam(dtEntrada, dataParam);
 	}
 	
 	private void verificaSeTrabExiste(Long id) {

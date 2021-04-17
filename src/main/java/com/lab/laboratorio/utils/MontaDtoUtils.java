@@ -4,6 +4,8 @@ import com.lab.laboratorio.dto.request.TrabalhoRequestDTO;
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
 import com.lab.laboratorio.model.Trabalho;
 
+import java.time.LocalDate;
+
 public class MontaDtoUtils {
 
     public static Trabalho dtoParaEntidade(TrabalhoRequestDTO trabalhoRequestDTO, Trabalho trabalho) {
@@ -11,7 +13,7 @@ public class MontaDtoUtils {
         trabalho.setCor(trabalhoRequestDTO.getCor());
         trabalho.setDentista(trabalhoRequestDTO.getDentista());
         trabalho.setMetal(trabalhoRequestDTO.getMetal());
-        trabalho.setDtEntrada(trabalhoRequestDTO.getDtEntrada());
+        trabalho.setDtEntrada(LocalDate.now());
         trabalho.setDtEntregaDesejada(trabalhoRequestDTO.getDtEntregaDesejada());
         trabalho.setObservacoes(trabalhoRequestDTO.getObservacoes());
         trabalho.setPaciente(trabalhoRequestDTO.getPaciente());

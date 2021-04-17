@@ -103,11 +103,11 @@ public class TrabalhoController {
 		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}", data);
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
-	@GetMapping("/buscaEntreDatas/{dataEntrada}/{dataEntregaDesejada}")
+	@GetMapping("/buscaEntreDatas/{dataEntrada}/{dataParam}")
 	public ResponseEntity<ResponseDTO<List<TrabalhoResponseDTO>>> buscaEntreDatas(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntrada,
-																				  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataEntregaDesejada){
+																				  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataParam){
 		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}");
-		List<TrabalhoResponseDTO> dto = service.buscaEntreDatas(dataEntrada, dataEntregaDesejada);
+		List<TrabalhoResponseDTO> dto = service.buscaEntreDatas(dataEntrada, dataParam);
 		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}" );
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
 	}
