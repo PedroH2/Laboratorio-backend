@@ -1,0 +1,606 @@
+[16/04/2021 23:50:29.574 -03] [restartedMain                    ] [INFO ] [com.lab.laboratorio.LaboratorioApplication                            ] Starting LaboratorioApplication using Java 1.8.0_282 on pedro-AB350M-DS3H-V2 with PID 340 (/home/pedro/git/Laboratorio-backend/target/classes started by pedro in /home/pedro/git/Laboratorio-backend)
+[16/04/2021 23:50:29.576 -03] [restartedMain                    ] [DEBUG] [com.lab.laboratorio.LaboratorioApplication                            ] Running with Spring Boot v2.4.3, Spring v5.3.4
+[16/04/2021 23:50:29.577 -03] [restartedMain                    ] [INFO ] [com.lab.laboratorio.LaboratorioApplication                            ] No active profile set, falling back to default profiles: default
+[16/04/2021 23:50:29.624 -03] [restartedMain                    ] [INFO ] [o.s.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor           ] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[16/04/2021 23:50:29.624 -03] [restartedMain                    ] [INFO ] [o.s.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor           ] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[16/04/2021 23:50:30.261 -03] [restartedMain                    ] [INFO ] [o.s.data.repository.config.RepositoryConfigurationDelegate            ] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[16/04/2021 23:50:30.305 -03] [restartedMain                    ] [INFO ] [o.s.data.repository.config.RepositoryConfigurationDelegate            ] Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+[16/04/2021 23:50:30.878 -03] [restartedMain                    ] [INFO ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer          ] Tomcat initialized with port(s): 8080 (http)
+[16/04/2021 23:50:30.887 -03] [restartedMain                    ] [INFO ] [org.apache.coyote.http11.Http11NioProtocol                            ] Initializing ProtocolHandler ["http-nio-8080"]
+[16/04/2021 23:50:30.887 -03] [restartedMain                    ] [INFO ] [org.apache.catalina.core.StandardService                              ] Starting service [Tomcat]
+[16/04/2021 23:50:30.888 -03] [restartedMain                    ] [INFO ] [org.apache.catalina.core.StandardEngine                               ] Starting Servlet engine: [Apache Tomcat/9.0.43]
+[16/04/2021 23:50:30.947 -03] [restartedMain                    ] [INFO ] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]       ] Initializing Spring embedded WebApplicationContext
+[16/04/2021 23:50:30.947 -03] [restartedMain                    ] [INFO ] [o.s.boot.web.servlet.context.ServletWebServerApplicationContext       ] Root WebApplicationContext: initialization completed in 1322 ms
+[16/04/2021 23:50:31.137 -03] [restartedMain                    ] [DEBUG] [org.hibernate.jpa.internal.util.LogHelper                             ] PersistenceUnitInfo [
+	name: default
+	persistence provider classname: null
+	classloader: org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4f40010d
+	excludeUnlistedClasses: true
+	JTA datasource: null
+	Non JTA datasource: HikariDataSource (null)
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/pedro/git/Laboratorio-backend/target/classes/
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names [
+		com.lab.laboratorio.model.Trabalho]
+	Mapping files names []
+	Properties []
+[16/04/2021 23:50:31.156 -03] [restartedMain                    ] [DEBUG] [org.hibernate.integrator.internal.IntegratorServiceImpl               ] Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+[16/04/2021 23:50:31.158 -03] [restartedMain                    ] [DEBUG] [org.hibernate.integrator.internal.IntegratorServiceImpl               ] Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+[16/04/2021 23:50:31.159 -03] [restartedMain                    ] [DEBUG] [org.hibernate.integrator.internal.IntegratorServiceImpl               ] Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+[16/04/2021 23:50:31.199 -03] [restartedMain                    ] [INFO ] [org.hibernate.Version                                                 ] HHH000412: Hibernate ORM core version 5.4.28.Final
+[16/04/2021 23:50:31.200 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Environment                                         ] HHH000206: hibernate.properties not found
+[16/04/2021 23:50:31.371 -03] [restartedMain                    ] [DEBUG] [org.hibernate.service.spi.ServiceBinding                              ] Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+[16/04/2021 23:50:31.381 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cache.internal.RegionFactoryInitiator                   ] Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+[16/04/2021 23:50:31.382 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cache.internal.RegionFactoryInitiator                   ] Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+[16/04/2021 23:50:31.396 -03] [restartedMain                    ] [INFO ] [org.hibernate.annotations.common.Version                              ] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[16/04/2021 23:50:31.428 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration boolean -> org.hibernate.type.BooleanType@25759ab
+[16/04/2021 23:50:31.429 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration boolean -> org.hibernate.type.BooleanType@25759ab
+[16/04/2021 23:50:31.429 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@25759ab
+[16/04/2021 23:50:31.430 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@69e0af79
+[16/04/2021 23:50:31.430 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration true_false -> org.hibernate.type.TrueFalseType@1ec200cf
+[16/04/2021 23:50:31.431 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration yes_no -> org.hibernate.type.YesNoType@703c864
+[16/04/2021 23:50:31.433 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration byte -> org.hibernate.type.ByteType@7cce9883
+[16/04/2021 23:50:31.433 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration byte -> org.hibernate.type.ByteType@7cce9883
+[16/04/2021 23:50:31.433 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@7cce9883
+[16/04/2021 23:50:31.434 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration character -> org.hibernate.type.CharacterType@4cfc5241
+[16/04/2021 23:50:31.435 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration char -> org.hibernate.type.CharacterType@4cfc5241
+[16/04/2021 23:50:31.435 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4cfc5241
+[16/04/2021 23:50:31.436 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration short -> org.hibernate.type.ShortType@2ff56525
+[16/04/2021 23:50:31.437 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration short -> org.hibernate.type.ShortType@2ff56525
+[16/04/2021 23:50:31.437 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2ff56525
+[16/04/2021 23:50:31.438 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration integer -> org.hibernate.type.IntegerType@3b65cc1a
+[16/04/2021 23:50:31.438 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration int -> org.hibernate.type.IntegerType@3b65cc1a
+[16/04/2021 23:50:31.438 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@3b65cc1a
+[16/04/2021 23:50:31.439 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration long -> org.hibernate.type.LongType@44ac566
+[16/04/2021 23:50:31.439 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration long -> org.hibernate.type.LongType@44ac566
+[16/04/2021 23:50:31.440 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Long -> org.hibernate.type.LongType@44ac566
+[16/04/2021 23:50:31.440 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration float -> org.hibernate.type.FloatType@3794b682
+[16/04/2021 23:50:31.441 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration float -> org.hibernate.type.FloatType@3794b682
+[16/04/2021 23:50:31.441 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Float -> org.hibernate.type.FloatType@3794b682
+[16/04/2021 23:50:31.442 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration double -> org.hibernate.type.DoubleType@38aa7908
+[16/04/2021 23:50:31.442 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration double -> org.hibernate.type.DoubleType@38aa7908
+[16/04/2021 23:50:31.442 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@38aa7908
+[16/04/2021 23:50:31.443 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@6de54db1
+[16/04/2021 23:50:31.443 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@6de54db1
+[16/04/2021 23:50:31.444 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration big_integer -> org.hibernate.type.BigIntegerType@d764adf
+[16/04/2021 23:50:31.444 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@d764adf
+[16/04/2021 23:50:31.445 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration string -> org.hibernate.type.StringType@26262d92
+[16/04/2021 23:50:31.445 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.String -> org.hibernate.type.StringType@26262d92
+[16/04/2021 23:50:31.446 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration nstring -> org.hibernate.type.StringNVarcharType@59016bc0
+[16/04/2021 23:50:31.446 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@9136967
+[16/04/2021 23:50:31.447 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration url -> org.hibernate.type.UrlType@30c90d01
+[16/04/2021 23:50:31.447 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.net.URL -> org.hibernate.type.UrlType@30c90d01
+[16/04/2021 23:50:31.448 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration Duration -> org.hibernate.type.DurationType@73fd2c92
+[16/04/2021 23:50:31.448 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.Duration -> org.hibernate.type.DurationType@73fd2c92
+[16/04/2021 23:50:31.449 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration Instant -> org.hibernate.type.InstantType@a2861f3
+[16/04/2021 23:50:31.450 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.Instant -> org.hibernate.type.InstantType@a2861f3
+[16/04/2021 23:50:31.451 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@7dd72b86
+[16/04/2021 23:50:31.451 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@7dd72b86
+[16/04/2021 23:50:31.452 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration LocalDate -> org.hibernate.type.LocalDateType@69909c0e
+[16/04/2021 23:50:31.453 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@69909c0e
+[16/04/2021 23:50:31.454 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@5551c155
+[16/04/2021 23:50:31.454 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@5551c155
+[16/04/2021 23:50:31.455 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e94d103
+[16/04/2021 23:50:31.455 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@2e94d103
+[16/04/2021 23:50:31.456 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@b697762
+[16/04/2021 23:50:31.456 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@b697762
+[16/04/2021 23:50:31.458 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5bdec2d5
+[16/04/2021 23:50:31.458 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@5bdec2d5
+[16/04/2021 23:50:31.459 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration date -> org.hibernate.type.DateType@b78fc99
+[16/04/2021 23:50:31.459 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.Date -> org.hibernate.type.DateType@b78fc99
+[16/04/2021 23:50:31.459 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration time -> org.hibernate.type.TimeType@71dce8d5
+[16/04/2021 23:50:31.460 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.Time -> org.hibernate.type.TimeType@71dce8d5
+[16/04/2021 23:50:31.460 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration timestamp -> org.hibernate.type.TimestampType@58eb549
+[16/04/2021 23:50:31.460 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@58eb549
+[16/04/2021 23:50:31.460 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.Date -> org.hibernate.type.TimestampType@58eb549
+[16/04/2021 23:50:31.461 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@331d450c
+[16/04/2021 23:50:31.462 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration calendar -> org.hibernate.type.CalendarType@45dba379
+[16/04/2021 23:50:31.462 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@45dba379
+[16/04/2021 23:50:31.462 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@45dba379
+[16/04/2021 23:50:31.463 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@2d22a8b1
+[16/04/2021 23:50:31.463 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@6659df9c
+[16/04/2021 23:50:31.464 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration locale -> org.hibernate.type.LocaleType@37da0cf7
+[16/04/2021 23:50:31.464 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@37da0cf7
+[16/04/2021 23:50:31.465 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration currency -> org.hibernate.type.CurrencyType@61d6076a
+[16/04/2021 23:50:31.465 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@61d6076a
+[16/04/2021 23:50:31.465 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration timezone -> org.hibernate.type.TimeZoneType@7f37c649
+[16/04/2021 23:50:31.465 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@7f37c649
+[16/04/2021 23:50:31.466 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration class -> org.hibernate.type.ClassType@745c7339
+[16/04/2021 23:50:31.466 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Class -> org.hibernate.type.ClassType@745c7339
+[16/04/2021 23:50:31.467 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@44d18431
+[16/04/2021 23:50:31.467 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@44d18431
+[16/04/2021 23:50:31.467 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@612bd1fe
+[16/04/2021 23:50:31.468 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration binary -> org.hibernate.type.BinaryType@57692c1a
+[16/04/2021 23:50:31.468 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration byte[] -> org.hibernate.type.BinaryType@57692c1a
+[16/04/2021 23:50:31.468 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration [B -> org.hibernate.type.BinaryType@57692c1a
+[16/04/2021 23:50:31.469 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@ade98c6
+[16/04/2021 23:50:31.469 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@ade98c6
+[16/04/2021 23:50:31.469 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@ade98c6
+[16/04/2021 23:50:31.470 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration row_version -> org.hibernate.type.RowVersionType@338c9126
+[16/04/2021 23:50:31.471 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration image -> org.hibernate.type.ImageType@4d321127
+[16/04/2021 23:50:31.471 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration characters -> org.hibernate.type.CharArrayType@74404a2b
+[16/04/2021 23:50:31.471 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration char[] -> org.hibernate.type.CharArrayType@74404a2b
+[16/04/2021 23:50:31.471 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration [C -> org.hibernate.type.CharArrayType@74404a2b
+[16/04/2021 23:50:31.472 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@238d0013
+[16/04/2021 23:50:31.472 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@238d0013
+[16/04/2021 23:50:31.472 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@238d0013
+[16/04/2021 23:50:31.473 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration text -> org.hibernate.type.TextType@7bbbc643
+[16/04/2021 23:50:31.473 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration ntext -> org.hibernate.type.NTextType@1228af51
+[16/04/2021 23:50:31.474 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration blob -> org.hibernate.type.BlobType@61550c72
+[16/04/2021 23:50:31.474 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@61550c72
+[16/04/2021 23:50:31.474 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@68195542
+[16/04/2021 23:50:31.475 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration clob -> org.hibernate.type.ClobType@58f0b834
+[16/04/2021 23:50:31.476 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@58f0b834
+[16/04/2021 23:50:31.476 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration nclob -> org.hibernate.type.NClobType@5d32852a
+[16/04/2021 23:50:31.477 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5d32852a
+[16/04/2021 23:50:31.477 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@704d5cd4
+[16/04/2021 23:50:31.477 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@7fd21926
+[16/04/2021 23:50:31.478 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration serializable -> org.hibernate.type.SerializableType@2712c8ad
+[16/04/2021 23:50:31.481 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration object -> org.hibernate.type.ObjectType@170c707e
+[16/04/2021 23:50:31.481 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@170c707e
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@741a4cb6
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@615dcb
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@149bd0d3
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@5d13262a
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@7b4abec2
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@71cf2b65
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3b9860c7
+[16/04/2021 23:50:31.482 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.BasicTypeRegistry                                  ] Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@7ffe23e8
+[16/04/2021 23:50:31.490 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.BootstrapContextImpl                      ] Injecting JPA temp ClassLoader [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ff24e3c] into BootstrapContext; was [null]
+[16/04/2021 23:50:31.490 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] ClassLoaderAccessImpl#injectTempClassLoader(org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ff24e3c) [was null]
+[16/04/2021 23:50:31.491 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.BootstrapContextImpl                      ] Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@63e16f2e] into BootstrapContext; was [null]
+[16/04/2021 23:50:31.491 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.BootstrapContextImpl                      ] Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@6eef4ec0] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@2287da7e]
+[16/04/2021 23:50:31.500 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.BootstrapContextImpl                      ] Injecting JPA temp ClassLoader [null] into BootstrapContext; was [org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ff24e3c]
+[16/04/2021 23:50:31.501 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] ClassLoaderAccessImpl#injectTempClassLoader(null) [was org.springframework.instrument.classloading.SimpleThrowawayClassLoader@1ff24e3c]
+[16/04/2021 23:50:31.509 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+[16/04/2021 23:50:31.510 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+[16/04/2021 23:50:31.510 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+[16/04/2021 23:50:31.510 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+[16/04/2021 23:50:31.510 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+[16/04/2021 23:50:31.511 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+[16/04/2021 23:50:31.511 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+[16/04/2021 23:50:31.512 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[16/04/2021 23:50:31.513 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+[16/04/2021 23:50:31.513 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+[16/04/2021 23:50:31.513 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+[16/04/2021 23:50:31.513 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+[16/04/2021 23:50:31.513 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+[16/04/2021 23:50:31.514 -03] [restartedMain                    ] [DEBUG] [org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory   ] Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+[16/04/2021 23:50:31.518 -03] [restartedMain                    ] [INFO ] [com.zaxxer.hikari.HikariDataSource                                    ] HikariPool-1 - Starting...
+[16/04/2021 23:50:31.521 -03] [restartedMain                    ] [WARN ] [com.zaxxer.hikari.util.DriverDataSource                               ] Registered driver with driverClassName=org.hsqldb.jdbcDriver was not found, trying direct instantiation.
+[16/04/2021 23:50:31.827 -03] [restartedMain                    ] [INFO ] [hsqldb.db.HSQLDB7809A10D35.ENGINE                                     ] checkpointClose start
+[16/04/2021 23:50:31.827 -03] [restartedMain                    ] [INFO ] [hsqldb.db.HSQLDB7809A10D35.ENGINE                                     ] checkpointClose synched
+[16/04/2021 23:50:31.836 -03] [restartedMain                    ] [INFO ] [hsqldb.db.HSQLDB7809A10D35.ENGINE                                     ] checkpointClose script done
+[16/04/2021 23:50:31.840 -03] [restartedMain                    ] [INFO ] [hsqldb.db.HSQLDB7809A10D35.ENGINE                                     ] checkpointClose end
+[16/04/2021 23:50:31.847 -03] [restartedMain                    ] [INFO ] [com.zaxxer.hikari.pool.PoolBase                                       ] HikariPool-1 - Driver does not support get/set network timeout for connections. (feature not supported)
+[16/04/2021 23:50:31.849 -03] [restartedMain                    ] [INFO ] [com.zaxxer.hikari.HikariDataSource                                    ] HikariPool-1 - Start completed.
+[16/04/2021 23:50:31.859 -03] [restartedMain                    ] [DEBUG] [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator       ] Database ->
+       name : HSQL Database Engine
+    version : 2.5.1
+      major : 2
+      minor : 5
+[16/04/2021 23:50:31.859 -03] [restartedMain                    ] [DEBUG] [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator       ] Driver ->
+       name : HSQL Database Engine Driver
+    version : 2.5.1
+      major : 2
+      minor : 5
+[16/04/2021 23:50:31.860 -03] [restartedMain                    ] [DEBUG] [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator       ] JDBC version : 4.2
+[16/04/2021 23:50:31.870 -03] [restartedMain                    ] [INFO ] [org.hibernate.dialect.Dialect                                         ] HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+[16/04/2021 23:50:31.887 -03] [restartedMain                    ] [DEBUG] [org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder             ] JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+[16/04/2021 23:50:31.919 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.model.relational.Namespace                         ] Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+[16/04/2021 23:50:31.921 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.spi.TypeConfiguration$Scope                        ] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@42ece26e] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@4315246]
+[16/04/2021 23:50:31.960 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AnnotationBinder                                    ] Binding entity from annotated class: com.lab.laboratorio.model.Trabalho
+[16/04/2021 23:50:31.972 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+[16/04/2021 23:50:31.976 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.EntityBinder                            ] Import with entity name Trabalho
+[16/04/2021 23:50:31.978 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.EntityBinder                            ] Bind entity com.lab.laboratorio.model.Trabalho on table db_trabalho
+[16/04/2021 23:50:31.995 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=id, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:31.997 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] Not known whether passed class name [com.lab.laboratorio.model.Trabalho] is safe
+[16/04/2021 23:50:31.997 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.lab.laboratorio.model.Trabalho
+[16/04/2021 23:50:31.997 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property id with lazy=false
+[16/04/2021 23:50:31.998 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:id]
+[16/04/2021 23:50:32.000 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for id
+[16/04/2021 23:50:32.001 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property id
+[16/04/2021 23:50:32.003 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.BinderHelper                                        ] #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=cidade, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property cidade with lazy=false
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:cidade]
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for cidade
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property cidade
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=cor, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.004 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property cor with lazy=false
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:cor]
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for cor
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property cor
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=dentista, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property dentista with lazy=false
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:dentista]
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for dentista
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property dentista
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=dt_entrada, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property dtEntrada with lazy=false
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:dtEntrada]
+[16/04/2021 23:50:32.005 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for dtEntrada
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property dtEntrada
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=dt_entrega_desejada, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property dtEntregaDesejada with lazy=false
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:dtEntregaDesejada]
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for dtEntregaDesejada
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property dtEntregaDesejada
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=metal, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property metal with lazy=false
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:metal]
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for metal
+[16/04/2021 23:50:32.006 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property metal
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=observacoes, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property observacoes with lazy=false
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:observacoes]
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for observacoes
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property observacoes
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=paciente, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property paciente with lazy=false
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:paciente]
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for paciente
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property paciente
+[16/04/2021 23:50:32.007 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=situacao_trabalho, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.008 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property situacaoTrabalho with lazy=false
+[16/04/2021 23:50:32.008 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:situacaoTrabalho]
+[16/04/2021 23:50:32.009 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for situacaoTrabalho
+[16/04/2021 23:50:32.009 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property situacaoTrabalho
+[16/04/2021 23:50:32.009 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Ejb3Column                                          ] Binding column: Ejb3Column{table=org.hibernate.mapping.Table(db_trabalho), mappingColumn=trabalhoaexecutar, insertable=true, updatable=true, unique=false}
+[16/04/2021 23:50:32.009 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] MetadataSourceProcessor property trabalhoAExecutar with lazy=false
+[16/04/2021 23:50:32.009 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.AbstractPropertyHolder                              ] Attempting to locate auto-apply AttributeConverter for property [com.lab.laboratorio.model.Trabalho:trabalhoAExecutar]
+[16/04/2021 23:50:32.010 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] building SimpleValue for trabalhoAExecutar
+[16/04/2021 23:50:32.010 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.PropertyBinder                          ] Building property trabalhoAExecutar
+[16/04/2021 23:50:32.011 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for id
+[16/04/2021 23:50:32.011 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for cidade
+[16/04/2021 23:50:32.011 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for cor
+[16/04/2021 23:50:32.011 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for dentista
+[16/04/2021 23:50:32.011 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for dtEntrada
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for dtEntregaDesejada
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for metal
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for observacoes
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for paciente
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for situacaoTrabalho
+[16/04/2021 23:50:32.012 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.annotations.SimpleValueBinder                       ] Starting fillSimpleValue for trabalhoAExecutar
+[16/04/2021 23:50:32.013 -03] [restartedMain                    ] [DEBUG] [org.hibernate.mapping.PrimaryKey                                      ] Forcing column [id] to be non-null as it is part of the primary key for table [db_trabalho]
+[16/04/2021 23:50:32.041 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryImpl                             ] Building session factory
+[16/04/2021 23:50:32.042 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] SessionFactory name : null
+[16/04/2021 23:50:32.042 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Automatic flush during beforeCompletion(): enabled
+[16/04/2021 23:50:32.042 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Automatic session close at end of transaction: disabled
+[16/04/2021 23:50:32.042 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Statistics: disabled
+[16/04/2021 23:50:32.042 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Deleted entity synthetic identifier rollback: disabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Default entity-mode: pojo
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Allow initialization of lazy state outside session : disabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Using BatchFetchStyle : LEGACY
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Default batch fetch size: -1
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Maximum outer join fetch depth: null
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Default null ordering: NONE
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Order SQL updates by primary key: disabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Order SQL inserts for batching: disabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] multi-tenancy strategy : NONE
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JTA Track by Thread: enabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Query language substitutions: {}
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Named query checking : enabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Second-level cache: disabled
+[16/04/2021 23:50:32.043 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Second-level query cache: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Second-level query cache factory: null
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Second-level cache region prefix: null
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Optimize second-level cache for minimal puts: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Structured second-level cache entries: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Second-level cache direct-reference entries: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Automatic eviction of collection cache: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JDBC batch size: 15
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JDBC batch updates for versioned data: enabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Scrollable result sets: enabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Wrap result sets: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JDBC3 getGeneratedKeys(): enabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JDBC result set fetch size: null
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Connection release mode: ON_CLOSE
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] Generate SQL with comments: disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JPA compliance - query : disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JPA compliance - closed-handling : disabled
+[16/04/2021 23:50:32.044 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JPA compliance - lists : disabled
+[16/04/2021 23:50:32.045 -03] [restartedMain                    ] [DEBUG] [org.hibernate.cfg.Settings                                            ] JPA compliance - transactions : disabled
+[16/04/2021 23:50:32.087 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryImpl                             ] Session factory constructed with filter configurations : {}
+[16/04/2021 23:50:32.087 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryImpl                             ] Instantiating session factory with properties: {sun.desktop=gnome, awt.toolkit=sun.awt.X11.XToolkit, hibernate.format_sql=true, hibernate.id.new_generator_mappings=true, java.specification.version=1.8, file.encoding.pkg=sun.io, sun.cpu.isalist=, hibernate.resource.beans.container=org.springframework.orm.hibernate5.SpringBeanContainer@99ae86, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.HSQLDialect, hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy, java.class.path=/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/charsets.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/cldrdata.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/dnsns.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/jaccess.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/jfxrt.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/localedata.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/nashorn.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/sunec.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/sunjce_provider.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/sunpkcs11.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext/zipfs.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jce.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jfr.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jfxswt.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jsse.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/management-agent.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/resources.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/rt.jar:/home/pedro/git/Laboratorio-backend/target/classes:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.4.3/spring-boot-starter-data-jpa-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.4.3/spring-boot-starter-aop-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/spring-aop/5.3.4/spring-aop-5.3.4.jar:/home/pedro/.m2/repository/org/aspectj/aspectjweaver/1.9.6/aspectjweaver-1.9.6.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.4.3/spring-boot-starter-jdbc-2.4.3.jar:/home/pedro/.m2/repository/com/zaxxer/HikariCP/3.4.5/HikariCP-3.4.5.jar:/home/pedro/.m2/repository/org/springframework/spring-jdbc/5.3.4/spring-jdbc-5.3.4.jar:/home/pedro/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/home/pedro/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/home/pedro/.m2/repository/org/hibernate/hibernate-core/5.4.28.Final/hibernate-core-5.4.28.Final.jar:/home/pedro/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/home/pedro/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/home/pedro/.m2/repository/net/bytebuddy/byte-buddy/1.10.20/byte-buddy-1.10.20.jar:/home/pedro/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/pedro/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/home/pedro/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/pedro/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar:/home/pedro/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/home/pedro/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.3/jaxb-runtime-2.3.3.jar:/home/pedro/.m2/repository/org/glassfish/jaxb/txw2/2.3.3/txw2-2.3.3.jar:/home/pedro/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.11/istack-commons-runtime-3.0.11.jar:/home/pedro/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/pedro/.m2/repository/org/springframework/data/spring-data-jpa/2.4.5/spring-data-jpa-2.4.5.jar:/home/pedro/.m2/repository/org/springframework/data/spring-data-commons/2.4.5/spring-data-commons-2.4.5.jar:/home/pedro/.m2/repository/org/springframework/spring-orm/5.3.4/spring-orm-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-context/5.3.4/spring-context-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-tx/5.3.4/spring-tx-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-beans/5.3.4/spring-beans-5.3.4.jar:/home/pedro/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/home/pedro/.m2/repository/org/springframework/spring-aspects/5.3.4/spring-aspects-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.4.3/spring-boot-starter-web-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter/2.4.3/spring-boot-starter-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.4.3/spring-boot-starter-logging-2.4.3.jar:/home/pedro/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/pedro/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/pedro/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar:/home/pedro/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar:/home/pedro/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar:/home/pedro/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/home/pedro/.m2/repository/org/yaml/snakeyaml/1.27/snakeyaml-1.27.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.4.3/spring-boot-starter-json-2.4.3.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.4/jackson-datatype-jdk8-2.11.4.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.4/jackson-module-parameter-names-2.11.4.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.4.3/spring-boot-starter-tomcat-2.4.3.jar:/home/pedro/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.43/tomcat-embed-core-9.0.43.jar:/home/pedro/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar:/home/pedro/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.43/tomcat-embed-websocket-9.0.43.jar:/home/pedro/.m2/repository/org/springframework/spring-web/5.3.4/spring-web-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-webmvc/5.3.4/spring-webmvc-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-expression/5.3.4/spring-expression-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-devtools/2.4.3/spring-boot-devtools-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot/2.4.3/spring-boot-2.4.3.jar:/home/pedro/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.4.3/spring-boot-autoconfigure-2.4.3.jar:/home/pedro/.m2/repository/org/hsqldb/hsqldb/2.5.1/hsqldb-2.5.1.jar:/home/pedro/.m2/repository/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar:/home/pedro/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar:/home/pedro/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar:/home/pedro/.m2/repository/org/springframework/spring-core/5.3.4/spring-core-5.3.4.jar:/home/pedro/.m2/repository/org/springframework/spring-jcl/5.3.4/spring-jcl-5.3.4.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.4/jackson-datatype-jsr310-2.11.4.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.4/jackson-annotations-2.11.4.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.4/jackson-core-2.11.4.jar:/home/pedro/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.4/jackson-databind-2.11.4.jar:/app/idea-IC/lib/idea_rt.jar, java.vm.vendor=Amazon.com Inc., sun.arch.data.model=64, java.vendor.url=https://aws.amazon.com/corretto/, catalina.useNaming=false, user.timezone=America/Sao_Paulo, os.name=Linux, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, user.country=BR, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/amd64, sun.java.command=com.lab.laboratorio.LaboratorioApplication, javax.persistence.nonJtaDataSource=HikariDataSource (HikariPool-1), hibernate.transaction.jta.platform=org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform@2ddde8ab, javax.persistence.sharedCache.mode=UNSPECIFIED, sun.cpu.endian=little, user.home=/home/pedro, user.language=pt, java.specification.vendor=Oracle Corporation, java.home=/home/pedro/.jdks/corretto-1.8.0_282/jre, file.separator=/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, FILE_LOG_CHARSET=UTF-8, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, java.awt.headless=true, sun.boot.class.path=/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/resources.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/rt.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/sunrsasign.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jsse.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jce.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/charsets.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/jfr.jar:/home/pedro/.jdks/corretto-1.8.0_282/jre/classes, hibernate.hbm2ddl.auto=update, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_282-b08, user.name=pedro, path.separator=:, os.version=5.4.0-58-generic, java.endorsed.dirs=/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/endorsed, java.runtime.name=OpenJDK Runtime Environment, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=default, spring.beaninfo.ignore=true, java.vm.name=OpenJDK 64-Bit Server VM, java.vendor.url.bug=https://github.com/corretto/corretto-8/issues/, java.io.tmpdir=/tmp, catalina.home=/tmp/tomcat.8080.1347770110350870996, java.version=1.8.0_282, hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy, user.dir=/home/pedro/git/Laboratorio-backend, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, PID=340, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, CONSOLE_LOG_CHARSET=UTF-8, catalina.base=/tmp/tomcat.8080.1347770110350870996, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@1924c65f, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=Amazon.com Inc., java.vm.info=mixed mode, java.vm.version=25.282-b08, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, hibernate.archive.scanner=org.hibernate.boot.archive.scan.internal.DisabledScanner, java.ext.dirs=/home/pedro/.jdks/corretto-1.8.0_282/jre/lib/ext:/usr/java/packages/lib/ext, hibernate.connection.datasource=HikariDataSource (HikariPool-1), java.class.version=52.0}
+[16/04/2021 23:50:32.098 -03] [restartedMain                    ] [DEBUG] [org.hibernate.secure.spi.JaccIntegrator                               ] Skipping JACC integration as it was not enabled
+[16/04/2021 23:50:32.102 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.EnumType                                           ] Using ORDINAL-based conversion for Enum com.lab.laboratorio.enums.SituacaoTrabalho
+[16/04/2021 23:50:32.103 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryImpl                             ] Instantiated session factory
+[16/04/2021 23:50:32.103 -03] [restartedMain                    ] [DEBUG] [org.hibernate.type.spi.TypeConfiguration$Scope                        ] Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@42ece26e] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@690274d6]
+[16/04/2021 23:50:32.145 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] Not known whether passed class name [com.lab.laboratorio.model.Trabalho] is safe
+[16/04/2021 23:50:32.145 -03] [restartedMain                    ] [DEBUG] [org.hibernate.boot.internal.ClassLoaderAccessImpl                     ] No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : com.lab.laboratorio.model.Trabalho
+[16/04/2021 23:50:32.303 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ] Static SQL for entity: com.lab.laboratorio.model.Trabalho
+[16/04/2021 23:50:32.303 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ]  Version select: select id from db_trabalho where id =?
+[16/04/2021 23:50:32.303 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ]  Snapshot select: select trabalho_.id, trabalho_.cidade as cidade2_0_, trabalho_.cor as cor3_0_, trabalho_.dentista as dentista4_0_, trabalho_.dt_entrada as dt_entra5_0_, trabalho_.dt_entrega_desejada as dt_entre6_0_, trabalho_.metal as metal7_0_, trabalho_.observacoes as observac8_0_, trabalho_.paciente as paciente9_0_, trabalho_.situacao_trabalho as situaca10_0_, trabalho_.trabalhoaexecutar as trabalh11_0_ from db_trabalho trabalho_ where trabalho_.id=?
+[16/04/2021 23:50:32.304 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ]  Insert 0: insert into db_trabalho (cidade, cor, dentista, dt_entrada, dt_entrega_desejada, metal, observacoes, paciente, situacao_trabalho, trabalhoaexecutar, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[16/04/2021 23:50:32.304 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ]  Update 0: update db_trabalho set cidade=?, cor=?, dentista=?, dt_entrada=?, dt_entrega_desejada=?, metal=?, observacoes=?, paciente=?, situacao_trabalho=?, trabalhoaexecutar=? where id=?
+[16/04/2021 23:50:32.304 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.entity.AbstractEntityPersister                ]  Delete 0: delete from db_trabalho where id=?
+[16/04/2021 23:50:32.328 -03] [restartedMain                    ] [DEBUG] [org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl       ] Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41f83e79]
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : cidade
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : cor
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : dentista
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : dtEntrada
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : dtEntregaDesejada
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : metal
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : observacoes
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : paciente
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : situacaoTrabalho
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [org.hibernate.persister.walking.spi.MetamodelGraphWalker              ] Visiting attribute path : trabalhoAExecutar
+[16/04/2021 23:50:32.329 -03] [restartedMain                    ] [DEBUG] [o.h.l.p.b.i.FetchStyleLoadPlanBuildingAssociationVisitationStrategy   ] Building LoadPlan...
+[16/04/2021 23:50:32.338 -03] [restartedMain                    ] [DEBUG] [org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor] processing queryspace <gen:0>
+[16/04/2021 23:50:32.341 -03] [restartedMain                    ] [DEBUG] [org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter               ] LoadPlan(entity=com.lab.laboratorio.model.Trabalho)
+    - Returns
+       - EntityReturnImpl(entity=com.lab.laboratorio.model.Trabalho, querySpaceUid=<gen:0>, path=com.lab.laboratorio.model.Trabalho)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.lab.laboratorio.model.Trabalho)
+          - SQL table alias mapping - trabalho0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+
+[16/04/2021 23:50:32.342 -03] [restartedMain                    ] [DEBUG] [org.hibernate.loader.entity.plan.EntityLoader                         ] Static select for entity com.lab.laboratorio.model.Trabalho [NONE]: select trabalho0_.id as id1_0_0_, trabalho0_.cidade as cidade2_0_0_, trabalho0_.cor as cor3_0_0_, trabalho0_.dentista as dentista4_0_0_, trabalho0_.dt_entrada as dt_entra5_0_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_0_, trabalho0_.metal as metal7_0_0_, trabalho0_.observacoes as observac8_0_0_, trabalho0_.paciente as paciente9_0_0_, trabalho0_.situacao_trabalho as situaca10_0_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_0_ from db_trabalho trabalho0_ where trabalho0_.id=?
+[16/04/2021 23:50:32.407 -03] [restartedMain                    ] [DEBUG] [org.hibernate.SQL                                                     ] 
+    
+    alter table db_trabalho 
+       add column dt_entrada date
+[16/04/2021 23:50:32.414 -03] [restartedMain                    ] [DEBUG] [org.hibernate.SQL                                                     ] 
+    
+    alter table db_trabalho 
+       add column dt_entrega_desejada date
+[16/04/2021 23:50:32.415 -03] [restartedMain                    ] [DEBUG] [org.hibernate.SQL                                                     ] 
+    
+    alter table db_trabalho 
+       add column situacao_trabalho integer
+[16/04/2021 23:50:32.417 -03] [restartedMain                    ] [INFO ] [o.h.engine.transaction.jta.platform.internal.JtaPlatformInitiator     ] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[16/04/2021 23:50:32.418 -03] [restartedMain                    ] [DEBUG] [org.hibernate.query.spi.NamedQueryRepository                          ] Checking 0 named HQL queries
+[16/04/2021 23:50:32.418 -03] [restartedMain                    ] [DEBUG] [org.hibernate.query.spi.NamedQueryRepository                          ] Checking 0 named SQL queries
+[16/04/2021 23:50:32.426 -03] [restartedMain                    ] [TRACE] [org.hibernate.type.spi.TypeConfiguration$Scope                        ] Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@690274d6] for TypeConfiguration
+[16/04/2021 23:50:32.428 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryRegistry                         ] Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@313a85c3
+[16/04/2021 23:50:32.429 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryRegistry                         ] Registering SessionFactory: 380441f8-3c85-48e5-8856-850867a87a11 (<unnamed>)
+[16/04/2021 23:50:32.429 -03] [restartedMain                    ] [DEBUG] [org.hibernate.internal.SessionFactoryRegistry                         ] Not binding SessionFactory to JNDI, no JNDI name configured
+[16/04/2021 23:50:32.430 -03] [restartedMain                    ] [INFO ] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean    ] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[16/04/2021 23:50:32.444 -03] [restartedMain                    ] [INFO ] [o.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+[16/04/2021 23:50:32.587 -03] [restartedMain                    ] [DEBUG] [org.hibernate.stat.internal.StatisticsInitiator                       ] Statistics initialized [enabled=false]
+[16/04/2021 23:50:32.719 -03] [restartedMain                    ] [DEBUG] [org.hibernate.engine.transaction.internal.TransactionImpl             ] On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[16/04/2021 23:50:32.784 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.QueryTranslatorFactoryInitiator            ] QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@4e9bf423
+[16/04/2021 23:50:32.820 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] parse() - HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntregaDesejada = :data 
+[16/04/2021 23:50:32.827 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.833 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'lab'
+    |  |     |  |  |  \-[IDENT] Node: 'laboratorio'
+    |  |     |  |  \-[IDENT] Node: 'model'
+    |  |     |  \-[IDENT] Node: 'Trabalho'
+    |  |     \-[ALIAS] Node: 't'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 't'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'dtEntregaDesejada'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'data'
+
+[16/04/2021 23:50:32.851 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select << begin [level=1, statement=select]
+[16/04/2021 23:50:32.860 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromElement                       ] FromClause{level=1} : com.lab.laboratorio.model.Trabalho (t) -> trabalho0_
+[16/04/2021 23:50:32.861 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : t -> trabalho0_.id
+[16/04/2021 23:50:32.863 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias} -> {synthetic-alias}
+[16/04/2021 23:50:32.863 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.DotNode                           ] getDataType() : dtEntregaDesejada -> org.hibernate.type.LocalDateType@69909c0e
+[16/04/2021 23:50:32.864 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias}.dtEntregaDesejada -> trabalho0_.dt_entrega_desejada
+[16/04/2021 23:50:32.865 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select : finishing up [level=1, statement=select]
+[16/04/2021 23:50:32.865 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.HqlSqlWalker                           ] processQuery() :  ( SELECT ( {select clause} trabalho0_.id ) ( FromClause{level=1} db_trabalho trabalho0_ ) ( where ( = ( trabalho0_.dt_entrega_desejada {synthetic-alias} dtEntregaDesejada ) ? ) ) )
+[16/04/2021 23:50:32.869 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Trabalho): [db_trabalho]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+    |  | originalText: t
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          | path: {synthetic-alias}.dtEntregaDesejada
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: dtEntregaDesejada
+          \-ParameterNode
+
+[16/04/2021 23:50:32.872 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Using FROM fragment [db_trabalho trabalho0_]
+[16/04/2021 23:50:32.873 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select >> end [level=1, statement=select]
+[16/04/2021 23:50:32.873 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (db_trabalho)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'trabalho0_.id as id1_0_' {alias=t, className=com.lab.laboratorio.model.Trabalho, tableAlias=trabalho0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[t], fromElementByTableAlias=[trabalho0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'db_trabalho trabalho0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=t,role=null,tableName=db_trabalho,tableAlias=trabalho0_,origin=null,columns={,className=com.lab.laboratorio.model.Trabalho}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'trabalho0_.dt_entrega_desejada' {propertyName=dtEntregaDesejada,dereferenceType=PRIMITIVE,getPropertyPath=dtEntregaDesejada,path={synthetic-alias}.dtEntregaDesejada,tableAlias=trabalho0_,className=com.lab.laboratorio.model.Trabalho,classAlias=t}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'dtEntregaDesejada' {originalText=dtEntregaDesejada}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=data, expectedType=org.hibernate.type.LocalDateType@69909c0e}
+
+[16/04/2021 23:50:32.873 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.879 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntregaDesejada = :data 
+[16/04/2021 23:50:32.879 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] SQL: select trabalho0_.id as id1_0_, trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_ from db_trabalho trabalho0_ where trabalho0_.dt_entrega_desejada=?
+[16/04/2021 23:50:32.879 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.890 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] parse() - HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntregaDesejada between :dtEntrada and:dtEntregaDesejada 
+[16/04/2021 23:50:32.892 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.892 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'lab'
+    |  |     |  |  |  \-[IDENT] Node: 'laboratorio'
+    |  |     |  |  \-[IDENT] Node: 'model'
+    |  |     |  \-[IDENT] Node: 'Trabalho'
+    |  |     \-[ALIAS] Node: 't'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 't'
+    \-[WHERE] Node: 'where'
+       \-[BETWEEN] Node: 'between'
+          +-[IDENT] Node: 'dtEntregaDesejada'
+          +-[COLON] Node: ':'
+          |  \-[IDENT] Node: 'dtEntrada'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'dtEntregaDesejada'
+
+[16/04/2021 23:50:32.892 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select << begin [level=1, statement=select]
+[16/04/2021 23:50:32.892 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromElement                       ] FromClause{level=1} : com.lab.laboratorio.model.Trabalho (t) -> trabalho0_
+[16/04/2021 23:50:32.892 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : t -> trabalho0_.id
+[16/04/2021 23:50:32.893 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias} -> {synthetic-alias}
+[16/04/2021 23:50:32.894 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.DotNode                           ] getDataType() : dtEntregaDesejada -> org.hibernate.type.LocalDateType@69909c0e
+[16/04/2021 23:50:32.894 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias}.dtEntregaDesejada -> trabalho0_.dt_entrega_desejada
+[16/04/2021 23:50:32.894 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select : finishing up [level=1, statement=select]
+[16/04/2021 23:50:32.894 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.HqlSqlWalker                           ] processQuery() :  ( SELECT ( {select clause} trabalho0_.id ) ( FromClause{level=1} db_trabalho trabalho0_ ) ( where ( between ( trabalho0_.dt_entrega_desejada {synthetic-alias} dtEntregaDesejada ) ? ? ) ) )
+[16/04/2021 23:50:32.895 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Trabalho): [db_trabalho]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+    |  | originalText: t
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BetweenOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          | path: {synthetic-alias}.dtEntregaDesejada
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: dtEntregaDesejada
+          +-ParameterNode
+          \-ParameterNode
+
+[16/04/2021 23:50:32.895 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Using FROM fragment [db_trabalho trabalho0_]
+[16/04/2021 23:50:32.895 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select >> end [level=1, statement=select]
+[16/04/2021 23:50:32.895 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (db_trabalho)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'trabalho0_.id as id1_0_' {alias=t, className=com.lab.laboratorio.model.Trabalho, tableAlias=trabalho0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[t], fromElementByTableAlias=[trabalho0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'db_trabalho trabalho0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=t,role=null,tableName=db_trabalho,tableAlias=trabalho0_,origin=null,columns={,className=com.lab.laboratorio.model.Trabalho}}
+    \-[WHERE] SqlNode: 'where'
+       \-[BETWEEN] BetweenOperatorNode: 'between'
+          +-[DOT] DotNode: 'trabalho0_.dt_entrega_desejada' {propertyName=dtEntregaDesejada,dereferenceType=PRIMITIVE,getPropertyPath=dtEntregaDesejada,path={synthetic-alias}.dtEntregaDesejada,tableAlias=trabalho0_,className=com.lab.laboratorio.model.Trabalho,classAlias=t}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'dtEntregaDesejada' {originalText=dtEntregaDesejada}
+          +-[NAMED_PARAM] ParameterNode: '?' {name=dtEntrada, expectedType=org.hibernate.type.LocalDateType@69909c0e}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=dtEntregaDesejada, expectedType=org.hibernate.type.LocalDateType@69909c0e}
+
+[16/04/2021 23:50:32.895 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.896 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntregaDesejada between :dtEntrada and:dtEntregaDesejada 
+[16/04/2021 23:50:32.896 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] SQL: select trabalho0_.id as id1_0_, trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_ from db_trabalho trabalho0_ where trabalho0_.dt_entrega_desejada between ? and ?
+[16/04/2021 23:50:32.896 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.898 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] parse() - HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntrada = :data 
+[16/04/2021 23:50:32.898 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.899 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[IDENT] Node: 'com'
+    |  |     |  |  |  |  \-[IDENT] Node: 'lab'
+    |  |     |  |  |  \-[IDENT] Node: 'laboratorio'
+    |  |     |  |  \-[IDENT] Node: 'model'
+    |  |     |  \-[IDENT] Node: 'Trabalho'
+    |  |     \-[ALIAS] Node: 't'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 't'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[IDENT] Node: 'dtEntrada'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'data'
+
+[16/04/2021 23:50:32.899 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select << begin [level=1, statement=select]
+[16/04/2021 23:50:32.899 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromElement                       ] FromClause{level=1} : com.lab.laboratorio.model.Trabalho (t) -> trabalho0_
+[16/04/2021 23:50:32.899 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : t -> trabalho0_.id
+[16/04/2021 23:50:32.900 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias} -> {synthetic-alias}
+[16/04/2021 23:50:32.900 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.DotNode                           ] getDataType() : dtEntrada -> org.hibernate.type.LocalDateType@69909c0e
+[16/04/2021 23:50:32.900 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.tree.FromReferenceNode                 ] Resolved : {synthetic-alias}.dtEntrada -> trabalho0_.dt_entrada
+[16/04/2021 23:50:32.900 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select : finishing up [level=1, statement=select]
+[16/04/2021 23:50:32.900 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.HqlSqlWalker                           ] processQuery() :  ( SELECT ( {select clause} trabalho0_.id ) ( FromClause{level=1} db_trabalho trabalho0_ ) ( where ( = ( trabalho0_.dt_entrada {synthetic-alias} dtEntrada ) ? ) ) )
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Trabalho): [db_trabalho]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+    |  | originalText: t
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          | path: {synthetic-alias}.dtEntrada
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(com.lab.laboratorio.model.Trabalho)
+          |  | originalText: {synthetic-alias}
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: dtEntrada
+          \-ParameterNode
+
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.util.JoinProcessor                     ] Using FROM fragment [db_trabalho trabalho0_]
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.antlr.HqlSqlBaseWalker                     ] select >> end [level=1, statement=select]
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (db_trabalho)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'trabalho0_.id as id1_0_' {alias=t, className=com.lab.laboratorio.model.Trabalho, tableAlias=trabalho0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[t], fromElementByTableAlias=[trabalho0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'db_trabalho trabalho0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=t,role=null,tableName=db_trabalho,tableAlias=trabalho0_,origin=null,columns={,className=com.lab.laboratorio.model.Trabalho}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'trabalho0_.dt_entrada' {propertyName=dtEntrada,dereferenceType=PRIMITIVE,getPropertyPath=dtEntrada,path={synthetic-alias}.dtEntrada,tableAlias=trabalho0_,className=com.lab.laboratorio.model.Trabalho,classAlias=t}
+          |  +-[IDENT] IdentNode: '{synthetic-alias}' {originalText={synthetic-alias}}
+          |  \-[IDENT] IdentNode: 'dtEntrada' {originalText=dtEntrada}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=data, expectedType=org.hibernate.type.LocalDateType@69909c0e}
+
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] HQL: select t from com.lab.laboratorio.model.Trabalho t where dtEntrada = :data 
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.QueryTranslatorImpl                    ] SQL: select trabalho0_.id as id1_0_, trabalho0_.cidade as cidade2_0_, trabalho0_.cor as cor3_0_, trabalho0_.dentista as dentista4_0_, trabalho0_.dt_entrada as dt_entra5_0_, trabalho0_.dt_entrega_desejada as dt_entre6_0_, trabalho0_.metal as metal7_0_, trabalho0_.observacoes as observac8_0_, trabalho0_.paciente as paciente9_0_, trabalho0_.situacao_trabalho as situaca10_0_, trabalho0_.trabalhoaexecutar as trabalh11_0_ from db_trabalho trabalho0_ where trabalho0_.dt_entrada=?
+[16/04/2021 23:50:32.901 -03] [restartedMain                    ] [DEBUG] [org.hibernate.hql.internal.ast.ErrorTracker                           ] throwQueryException() : no errors
+[16/04/2021 23:50:32.976 -03] [restartedMain                    ] [WARN ] [o.s.b.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration  ] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[16/04/2021 23:50:33.131 -03] [restartedMain                    ] [INFO ] [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor      ] Initializing ExecutorService 'applicationTaskExecutor'
+[16/04/2021 23:50:33.502 -03] [restartedMain                    ] [INFO ] [org.apache.coyote.http11.Http11NioProtocol                            ] Starting ProtocolHandler ["http-nio-8080"]
+[16/04/2021 23:50:33.536 -03] [restartedMain                    ] [INFO ] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer          ] Tomcat started on port(s): 8080 (http) with context path ''
+[16/04/2021 23:50:33.557 -03] [restartedMain                    ] [INFO ] [com.lab.laboratorio.LaboratorioApplication                            ] Started LaboratorioApplication in 4.338 seconds (JVM running for 4.893)

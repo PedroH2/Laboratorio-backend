@@ -1,8 +1,10 @@
 package com.lab.laboratorio.controller;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.lab.laboratorio.utils.TotalFatObj;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -108,5 +110,24 @@ public class TrabalhoController {
 		List<TrabalhoResponseDTO> dto = service.buscaEntreDatas(dataEntrada, dataEntregaDesejada);
 		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}" );
 		return ResponseEntity.ok(new ResponseDTO<>(dto));
+	}
+	@PutMapping("/finalizarTrab/{id}")
+	public ResponseEntity<ResponseDTO<TrabalhoResponseDTO>> finalizaTrab(@PathVariable Long id){
+		log.debug("Iniciando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id);
+		TrabalhoResponseDTO trabalhoResponseDTO = service.finalizaTrab(id);
+		log.debug("Finalizando processo de PUT no endpoint: /api/v1/trabalho/altera/id", id);
+		return ResponseEntity.ok(new ResponseDTO<>(trabalhoResponseDTO));
+
+	}
+
+
+
+	@GetMapping("/buscaFaturamentoDeTrabsFinalizados/{dataParamInicial}/{dataParam}")
+	public ResponseEntity<TotalFatObj> buscaFaturamentoDeTrabsFinalizados(@PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataParamInicial,
+																		  @PathVariable @DateTimeFormat(pattern = "dd-MM-yyyy") LocalDate dataParam){
+		log.debug("Iniciando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}");
+		TotalFatObj valTotal = service.buscaFaturamentoTotalDeTrabsFinalizados(dataParamInicial, dataParam);
+		log.debug("Finalizando processo de GET no endpoint: /api/v1/trabalho/buscaPorDataDeEntrada/{}" );
+		return ResponseEntity.ok().body(valTotal);
 	}
 }

@@ -67,4 +67,8 @@ public class TrabalhoBusiness {
 		if(!findById.isPresent())
 			throw new ResourceNotFoundException("Nenhum trabalho encontrado para realizar a operação");
 	}
+
+	public List<Trabalho> buscaFaturamentoDeTrabsFinalizados(LocalDate dataEntrada, LocalDate dataParametroFat) {
+		return repository.buscaEntreDatas(dataEntrada, dataParametroFat);
+	}
 }

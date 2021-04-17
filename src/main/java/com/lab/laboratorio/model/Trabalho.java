@@ -1,5 +1,6 @@
 package com.lab.laboratorio.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -58,4 +59,9 @@ public class Trabalho {
 	@Column
 	private SituacaoTrabalho situacaoTrabalho;
 
+	@Column
+	private BigDecimal valorTrabalho;
+
+	@Column
+	private LocalDate dtFinalizacao;
 }

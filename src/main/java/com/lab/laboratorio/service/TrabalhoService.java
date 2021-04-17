@@ -1,9 +1,11 @@
 package com.lab.laboratorio.service;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.lab.laboratorio.utils.TotalFatObj;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.business.TrabalhoBusiness;
@@ -87,5 +89,24 @@ public class TrabalhoService {
 		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
 
 		return trabalhosDTO;
+	}
+
+	public TotalFatObj buscaFaturamentoTotalDeTrabsFinalizados(LocalDate dataParamInicial, LocalDate dataParametroFat) {
+		List<Trabalho> trabalhos = business.buscaFaturamentoDeTrabsFinalizados(dataParamInicial, dataParametroFat);
+		Long somaFatTrab = 0l;
+		for (Trabalho trab : trabalhos) {
+			somaFatTrab += trab.getValorTrabalho().longValue();
+		}
+		TotalFatObj obj = new TotalFatObj(trabalhos.size(), dataParametroFat.getDayOfYear() - dataParamInicial.getDayOfYear(),
+										somaFatTrab,dataParamInicial,dataParametroFat);
+		return obj;
+	}
+
+	public TrabalhoResponseDTO finalizaTrab(Long id) {
+		Trabalho trabalhoAlterado = business.buscaPorId(id);
+		trabalhoAlterado.setSituacaoTrabalho(SituacaoTrabalho.FECHADO);
+		trabalhoAlterado.setDtFinalizacao(LocalDate.now());
+		business.altera(trabalhoAlterado);
+		return MontaDtoUtils.entidadeParaResponseDTO(trabalhoAlterado);
 	}
 }

@@ -17,6 +17,8 @@ public class MontaDtoUtils {
         trabalho.setPaciente(trabalhoRequestDTO.getPaciente());
         trabalho.setTrabalhoAExecutar(trabalhoRequestDTO.getTrabalhoAExecutar());
         trabalho.setSituacaoTrabalho(trabalhoRequestDTO.getSituacaoTrabalho());
+        trabalho.setValorTrabalho(trabalhoRequestDTO.getValorTrabalho());
+        trabalho.setDtFinalizacao(trabalhoRequestDTO.getDtFinalizacao());
         return trabalho;
     }
 
@@ -33,6 +35,8 @@ public class MontaDtoUtils {
                 .observacoes(trabalho.getObservacoes())
                 .trabalhoAExecutar(trabalho.getTrabalhoAExecutar())
                 .situacaoTrabalho(trabalho.getSituacaoTrabalho())
+                .valorTrabalho(trabalho.getValorTrabalho())
+                .dtFinalizacao(trabalho.getDtFinalizacao())
                 .build();
     }
 }

@@ -1,5 +1,6 @@
 package com.lab.laboratorio.dto.response;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -33,4 +34,6 @@ public class TrabalhoResponseDTO {
 	private String metal;
 	private String observacoes;
 	private SituacaoTrabalho situacaoTrabalho;
+	private BigDecimal valorTrabalho;
+	private LocalDate dtFinalizacao;
 }

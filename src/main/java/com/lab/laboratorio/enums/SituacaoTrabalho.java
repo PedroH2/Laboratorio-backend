@@ -11,5 +11,5 @@ public enum SituacaoTrabalho {
 	FECHADO("F"),
 	SUSPENSO("C");
 
-	private String codigo;
+	private final String codigo;
 }
