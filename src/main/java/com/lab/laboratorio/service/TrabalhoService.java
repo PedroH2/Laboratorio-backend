@@ -59,48 +59,6 @@ public class TrabalhoService {
 		return MontaDtoUtils.entidadeParaResponseDTO(trabalhoAlterado);
 	}
 
-	public List<TrabalhoResponseDTO> buscaPorSituacaoTrabalho(SituacaoTrabalho situacao) {
-		List<Trabalho> trabalhos = business.buscaPorSituacaoTrabalho(situacao);
-		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
-		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
-
-		return trabalhosDTO;
-	}
-
-	public List<TrabalhoResponseDTO> buscaPorDataDeEntrada(LocalDate data) {
-		List<Trabalho> trabalhos = business.buscaPorDataDeEntrada(data);
-		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
-		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
-
-		return trabalhosDTO;
-	}
-
-	public List<TrabalhoResponseDTO> buscaPorDataDeEntregaDesejada(LocalDate data) {
-		List<Trabalho> trabalhos = business.buscaPorDataDeEntregaDesejada(data);
-		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
-		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
-
-		return trabalhosDTO;
-	}
-
-	public List<TrabalhoResponseDTO> buscaEntreDatas(LocalDate dtEntrada, LocalDate dataParam) {
-		List<Trabalho> trabalhos = business.buscaEntreDatas(dtEntrada, dataParam);
-		List<TrabalhoResponseDTO> trabalhosDTO = new ArrayList<>();
-		trabalhos.forEach(trab -> trabalhosDTO.add(MontaDtoUtils.entidadeParaResponseDTO(trab)));
-
-		return trabalhosDTO;
-	}
-
-	public TotalFatObj buscaFaturamentoTotalDeTrabsFinalizados(LocalDate dataParamInicial, LocalDate dataParametroFat) {
-		List<Trabalho> trabalhos = business.buscaFaturamentoDeTrabsFinalizados(dataParamInicial, dataParametroFat);
-		Long somaFatTrab = 0l;
-		for (Trabalho trab : trabalhos) {
-			somaFatTrab += trab.getValorTrabalho().longValue();
-		}
-		TotalFatObj obj = new TotalFatObj(trabalhos.size(), dataParametroFat.getDayOfYear() - dataParamInicial.getDayOfYear(),
-										somaFatTrab,dataParamInicial,dataParametroFat);
-		return obj;
-	}
 
 	public TrabalhoResponseDTO finalizaTrab(Long id) {
 		Trabalho trabalhoAlterado = business.buscaPorId(id);

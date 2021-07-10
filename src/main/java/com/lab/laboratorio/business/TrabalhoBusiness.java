@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
+import com.lab.laboratorio.utils.TrabalhoUtils;
 import org.springframework.stereotype.Component;
 
 import com.lab.laboratorio.dto.response.TrabalhoResponseDTO;
@@ -22,6 +23,8 @@ public class TrabalhoBusiness {
 		this.repository = repository;
 	}
 
+	TrabalhoUtils trabalhoUtils;
+
 	public TrabalhoResponseDTO cadastra(Trabalho trabalho) {
 		Trabalho save = repository.save(trabalho);
 		return MontaDtoUtils.entidadeParaResponseDTO(save);
@@ -32,43 +35,17 @@ public class TrabalhoBusiness {
 	}
 
 	public Trabalho altera(Trabalho trabalho) {
-		verificaSeTrabExiste(trabalho.getId());		
+		trabalhoUtils.verificaSeTrabExiste(trabalho.getId());
 		return repository.save(trabalho);
 	}
 
 	public void deleta(Long id) {
-		verificaSeTrabExiste(id);
+		trabalhoUtils.verificaSeTrabExiste(id);
 		repository.deleteById(id);
 	}
 
 	public Trabalho buscaPorId(Long id) {
-		verificaSeTrabExiste(id);
+		trabalhoUtils.verificaSeTrabExiste(id);
 		return repository.findById(id).get();
-	}
-
-	public List<Trabalho> buscaPorSituacaoTrabalho(SituacaoTrabalho situacao) {
-		return repository.findBySituacaoTrabalho(situacao);
-	}
-
-	public List<Trabalho> buscaPorDataDeEntrada(LocalDate data) {
-		return repository.buscaPorDataDeEntrada(data);
-	}
-
-	public List<Trabalho> buscaPorDataDeEntregaDesejada(LocalDate data) {
-		return repository.buscaPorDataDeEntregaDesejada(data);
-	}
-
-	public List<Trabalho> buscaEntreDatas(LocalDate dtEntrada, LocalDate dataParam) {
-		return repository.buscaEntreDatasParam(dtEntrada, dataParam);
-	}
-	
-	private void verificaSeTrabExiste(Long id) {
-		Optional<Trabalho> findById = repository.findById(id);
-		if(!findById.isPresent())
-			throw new ResourceNotFoundException("Nenhum trabalho encontrado para realizar a operação");
-	}
-
-	public List<Trabalho> buscaFaturamentoDeTrabsFinalizados(LocalDate dataEntrada, LocalDate dataParametroFat) {
-		return repository.buscaEntreDatas(dataEntrada, dataParametroFat);
 	}
 }

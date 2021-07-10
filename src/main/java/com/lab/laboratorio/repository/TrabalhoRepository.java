@@ -13,17 +13,5 @@ import java.util.List;
 
 @Repository
 public interface TrabalhoRepository extends JpaRepository<Trabalho, Long> {
-    List<Trabalho> findBySituacaoTrabalho(SituacaoTrabalho situacao);
 
-    @Query("select t from Trabalho t where dtEntrada = :data ")
-    List<Trabalho> buscaPorDataDeEntrada(LocalDate data);
-
-    @Query("select t from Trabalho t where dtEntregaDesejada = :data ")
-    List<Trabalho> buscaPorDataDeEntregaDesejada(LocalDate data);
-
-    @Query("select t from Trabalho t where dtEntrada between :dtEntrada and :dataParam ")
-    List<Trabalho> buscaEntreDatasParam(@Param("dtEntrada")LocalDate dtEntrada, @Param("dataParam")LocalDate dataParam);
-
-    @Query("select t from Trabalho t where dtFinalizacao between :dtEntrada and :dataParametroFat ")
-    List<Trabalho> buscaEntreDatas(@Param("dtEntrada")LocalDate dtEntrada, @Param("dataParametroFat")LocalDate dataParametroFat);
 }
